@@ -11,7 +11,10 @@ from paramsettings import *
 
 # ----------------------------------------
 # global parameters
-name = "front"
+# name = "front"
+# name = "back" # added by Holy 2006061032
+# name = "left" # added by Holy 2006061032
+name = "right" # added by Holy 2006061032
 image_file = "./yaml/{}.png".format(name)
 camera_file = "./yaml/{}.yaml".format(name)
 output = "./yaml/{}_projMat.yaml".format(name)
@@ -46,7 +49,7 @@ dstL = np.float32([
 dsts = {"front": dstF, "back": dstF, "left": dstL, "right": dstL}
 
 
-def click(event, x, y, flags, param):
+def click(event, x, y, flags, param):    
     image, = param
     if event == cv2.EVENT_LBUTTONDOWN:
         print(x, y)
